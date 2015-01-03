@@ -165,7 +165,7 @@ static int proc_allowed_congestion_control(ctl_table *ctl,
 	tcp_get_allowed_congestion_control(tbl.data, tbl.maxlen);
 	ret = proc_dostring(&tbl, write, buffer, lenp, ppos);
 	if (write && ret == 0)
-		ret = tcp_set_allowed_congestion_control(tbl.data);
+		ret = tcp_set_available_congestion_control(tbl.data);
 	kfree(tbl.data);
 	return ret;
 }
