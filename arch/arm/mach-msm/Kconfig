@@ -2713,6 +2713,13 @@ config MSM_OCMEM_LOCAL_POWER_CTRL
 	  the RPM. Selecting this option causes the OCMEM driver to
 	  directly handle the various macro power transitions.
 
+config FORCE_FAST_CHARGE
+	bool "Increase input current limit to 1100mA when charging via USB"
+	default y
+	help
+	A simple sysfs interface to increase input current limit to
+	1100mA when charging via USB.
+
 config MSM_OCMEM_DEBUG
 	bool "OCMEM Debug Support"
 	depends on MSM_OCMEM
